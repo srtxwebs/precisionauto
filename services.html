@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Services | Precision Auto Repair &amp; Service</title>
+<meta name="description" content="Honest, ASE-certified auto repair for all makes and models. Oil changes, brakes, diagnostics and more.">
+<!-- Optional: put your logo icon at images/favicon.png -->
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="services">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="m3 12.5 6 6L21 6" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="wrench" viewBox="0 0 48 48"><path fill="currentColor" d="M41.8 8.6 34.6 15.8l-4.9-1.5-1.5-4.9 7.2-7.2A11 11 0 0 0 21.2 16.1L4.6 32.7a4.6 4.6 0 0 0 6.5 6.5l16.6-16.6A11 11 0 0 0 41.8 8.6Z"/><circle cx="7.9" cy="36" r="1.8" fill="#fff"/></symbol>
+  <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></symbol>
+  <symbol id="pin" viewBox="0 0 40 40"><path fill="currentColor" d="M20 2a13 13 0 0 0-13 13c0 9.7 13 23 13 23s13-13.3 13-23A13 13 0 0 0 20 2Zm0 18a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></symbol>
+  <symbol id="globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 3.8 5.8 3.8 9s-1.2 6.2-3.8 9c-2.6-2.8-3.8-5.8-3.8-9S9.4 5.8 12 3Z"/></g></symbol>
+  <symbol id="caret" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></g></symbol>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <div class="nav-in">
+      <a class="logo" href="index.html" aria-label="Precision Auto home">
+        <svg viewBox="0 0 48 48" style="color:var(--accent)"><use href="#wrench"/></svg>
+        <span><b>PRECISION AUTO</b><small>REPAIR &amp; SERVICE</small></span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="index.html#specials" data-i18n="nav.specials">Specials</a>
+        <a href="index.html#about" data-i18n="nav.about">About Us</a>
+        <a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <span class="nav-phone"><svg viewBox="0 0 24 24"><use href="#phone"/></svg>(555) 284-7730</span>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="nav.lang" aria-label="Language">
+          <svg><use href="#globe"/></svg><span id="langCur">EN</span><svg class="caret"><use href="#caret"/></svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox"></ul>
+      </div>
+      <a class="btn btn-primary" href="#book" data-book data-i18n="nav.book">Book an Appointment</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mmenu">
+      <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="index.html#specials" data-i18n="nav.specials">Specials</a>
+        <a href="index.html#about" data-i18n="nav.about">About Us</a>
+        <a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a class="btn btn-primary" href="#book" data-book data-i18n="nav.book">Book an Appointment</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html" data-i18n="sp.home">Home</a><span>/</span><span data-i18n="nav.services">Services</span></div>
+      <span class="eyebrow" data-i18n="sp.eyebrow">Our services</span>
+      <h1 data-i18n="sp.title">Every Service We Offer</h1>
+      <p data-i18n="sp.sub">Tap any service to see what's included.</p>
+      <div class="filters">
+        <label class="search"><svg><use href="#search"/></svg><input id="svcSearch" type="search" data-i18n-ph="sp.search" placeholder="Search services"></label>
+        <div class="cats" id="cats">
+          <button class="cat" data-cat="all" aria-pressed="true" data-i18n="cat.all">All</button>
+          <button class="cat" data-cat="maint" aria-pressed="false" data-i18n="cat.maint">Maintenance</button>
+          <button class="cat" data-cat="repair" aria-pressed="false" data-i18n="cat.repair">Repair</button>
+          <button class="cat" data-cat="diag" aria-pressed="false" data-i18n="cat.diag">Diagnostics</button>
+          <button class="cat" data-cat="comfort" aria-pressed="false" data-i18n="cat.comfort">Comfort &amp; Electrical</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="all-grid" id="allGrid"></div>
+      <p class="no-res" id="noRes" hidden data-i18n="sp.none">No services match your search.</p>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="wrap cta-in">
+      <h2 data-i18n="cta.title">Check engine light on? Let's find out why today.</h2>
+      <a class="btn" href="#book" data-book><span data-i18n="cta.btn">Book an Appointment</span> <svg><use href="#arrow"/></svg></a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="logo" href="index.html"><svg viewBox="0 0 48 48" style="color:var(--accent)"><use href="#wrench"/></svg><span><b>PRECISION AUTO</b><small>REPAIR &amp; SERVICE</small></span></a>
+      <p data-i18n="foot.tag">Honest, certified auto repair for every make and model since 2008.</p>
+    </div>
+    <div><h4 data-i18n="foot.services">Services</h4><ul id="footSvcs"></ul></div>
+    <div><h4 data-i18n="foot.company">Company</h4><ul>
+      <li><a href="index.html#about" data-i18n="nav.about">About Us</a></li>
+      <li><a href="index.html#specials" data-i18n="nav.specials">Specials</a></li>
+      <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+      <li><a href="#book" data-book data-i18n="nav.book">Book an Appointment</a></li></ul></div>
+    <div><h4 data-i18n="foot.contact">Contact</h4><ul><li>4120 Industrial Blvd</li><li>(555) 284-7730</li><li>service@precisionauto.com</li></ul></div>
+  </div>
+  <div class="wrap copy"><span>© <span id="yr">2026</span> Precision Auto Repair &amp; Service. <span data-i18n="foot.rights">All rights reserved.</span></span><span>ASE Certified · AAA Approved</span></div>
+</footer>
+
+<a class="btn btn-primary fab" id="fab" href="#book" data-book><svg viewBox="0 0 24 24"><use href="#clock"/></svg><span data-i18n="float.book">Book now</span></a>
+<button class="totop" id="totop" aria-label="Back to top"><svg style="transform:rotate(-90deg)"><use href="#arrow"/></svg></button>
+
+<!-- ============ SERVICE DETAILS WINDOW ============ -->
+<div class="modal" id="svcModal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="dialog svc-dialog" role="dialog" aria-modal="true" aria-labelledby="smTitle" tabindex="-1">
+    <button class="x" data-close data-i18n-aria="m.close" aria-label="Close">×</button>
+    <div class="sm-media" id="smMedia">
+      <img id="smImg" alt="">
+      <span class="sm-cat" id="smCat"></span>
+      <div class="sm-nav">
+        <button id="smPrev" data-i18n-aria="m.prev" aria-label="Previous service"><svg style="transform:scaleX(-1)"><use href="#arrow"/></svg></button>
+        <button id="smNext" data-i18n-aria="m.next" aria-label="Next service"><svg><use href="#arrow"/></svg></button>
+      </div>
+      <span class="sm-count" id="smCount"></span>
+    </div>
+    <div class="sm-body" id="smBody">
+      <h2 id="smTitle"></h2>
+      <p id="smDesc"></p>
+      <div class="facts">
+        <div class="fact price"><small data-i18n="m.price">Starting at</small><b id="smPrice"></b></div>
+        <div class="fact"><small data-i18n="m.time">Time</small><b id="smTime"></b></div>
+        <div class="fact"><small data-i18n="m.warranty">Warranty</small><b data-i18n="m.warrantyVal">24 mo / 24k mi</b></div>
+      </div>
+      <h4 data-i18n="m.inc">What's included</h4>
+      <ul class="inc" id="smInc"></ul>
+      <button class="btn btn-primary" id="smBook"><span data-i18n="m.book">Book this service</span> <svg><use href="#arrow"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ BOOKING WINDOW ============ -->
+<div class="modal" id="bookModal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="dialog book-dialog" role="dialog" aria-modal="true" aria-labelledby="bkTitle" tabindex="-1">
+    <button class="x" data-close data-i18n-aria="m.close" aria-label="Close">×</button>
+    <div class="bk-head">
+      <h2 id="bkTitle" data-i18n="b.title">Book an Appointment</h2>
+      <ol class="stepper" id="stepper">
+        <li data-i18n="b.step1">Service</li><li data-i18n="b.step2">Vehicle &amp; time</li><li data-i18n="b.step3">Your details</li>
+      </ol>
+    </div>
+    <form id="bkForm" novalidate>
+      <div class="bk-body">
+        <section class="bk-step" data-step="1">
+          <h3 data-i18n="b.s1h">What does your car need?</h3>
+          <p data-i18n="b.s1p">Pick one or more services.</p>
+          <div class="bk-svcs" id="bkSvcs"></div>
+        </section>
+
+        <section class="bk-step" data-step="2" hidden>
+          <h3 data-i18n="b.s2h">Your vehicle and a time</h3>
+          <div class="row3">
+            <div class="field"><label for="bk-year" data-i18n="b.year">Year</label><select id="bk-year" required></select></div>
+            <div class="field"><label for="bk-make" data-i18n="b.make">Make</label><input id="bk-make" required placeholder="Toyota" list="makes"></div>
+            <div class="field"><label for="bk-model" data-i18n="b.model">Model</label><input id="bk-model" required placeholder="Camry"></div>
+          </div>
+          <datalist id="makes"></datalist>
+          <div class="field"><label for="bk-date" data-i18n="b.date">Date</label><input id="bk-date" type="date" required></div>
+          <div class="field"><label data-i18n="b.time">Available times</label>
+            <div class="slots" id="bkSlots"></div>
+            <p class="note" id="bkSunday" hidden data-i18n="b.sunday">We're closed on Sundays. Please pick another day.</p>
+          </div>
+        </section>
+
+        <section class="bk-step" data-step="3" hidden>
+          <h3 data-i18n="b.s3h">How can we reach you?</h3>
+          <div class="row2">
+            <div class="field"><label for="bk-name" data-i18n="b.name">Full name</label><input id="bk-name" required autocomplete="name" placeholder="Jordan Smith"></div>
+            <div class="field"><label for="bk-phone" data-i18n="b.phone">Phone</label><input id="bk-phone" type="tel" required autocomplete="tel" placeholder="(555) 123-4567"></div>
+          </div>
+          <div class="field"><label for="bk-email" data-i18n="b.email">Email (optional)</label><input id="bk-email" type="email" autocomplete="email" placeholder="you@email.com"></div>
+          <div class="field"><label for="bk-notes" data-i18n="b.notes">What's going on? (optional)</label><textarea id="bk-notes" rows="3" data-i18n-ph="b.notesPh"></textarea></div>
+          <div class="field"><label data-i18n="b.pref">Contact me by</label>
+            <div class="pref" id="bkPref">
+              <button type="button" class="chip" data-v="text" aria-pressed="true" data-i18n="b.text">Text</button>
+              <button type="button" class="chip" data-v="call" aria-pressed="false" data-i18n="b.call">Call</button>
+              <button type="button" class="chip" data-v="mail" aria-pressed="false" data-i18n="b.mail">Email</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="bk-step bk-done" data-step="4" hidden>
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="32" cy="32" r="29"/><path d="m19 33 9 9 17-18"/></svg>
+          <h3 data-i18n="b.doneT">You're booked!</h3>
+          <p style="color:var(--muted)" data-i18n="b.doneP">We'll contact you within one business hour to confirm.</p>
+          <span class="bk-ref"><span data-i18n="b.ref">Confirmation</span> <span id="bkRef"></span></span>
+          <dl class="summary">
+            <div><dt data-i18n="b.sumSvc">Services</dt><dd id="sumSvc"></dd></div>
+            <div><dt data-i18n="b.sumCar">Vehicle</dt><dd id="sumCar"></dd></div>
+            <div><dt data-i18n="b.sumWhen">When</dt><dd id="sumWhen"></dd></div>
+          </dl>
+        </section>
+      </div>
+
+      <div class="bk-foot" id="bkFoot">
+        <p class="bk-err" id="bkErr" role="alert"></p>
+        <div class="bk-est" id="bkEstWrap"><small data-i18n="b.est">Starting estimate</small><b id="bkEst">$0</b></div>
+        <button type="button" class="btn btn-outline" id="bkBack" data-i18n="b.back">Back</button>
+        <button type="submit" class="btn btn-primary" id="bkNext"><span id="bkNextLbl" data-i18n="b.next">Continue</span> <svg><use href="#arrow"/></svg></button>
+        <button type="button" class="btn btn-outline" id="bkAgain" hidden data-i18n="b.another">Book another car</button>
+        <button type="button" class="btn btn-primary" id="bkClose" hidden data-close data-i18n="b.close">Done</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/translations.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
